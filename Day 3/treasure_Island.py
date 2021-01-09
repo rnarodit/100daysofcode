@@ -1,3 +1,4 @@
+#use 3 single quotes on both side to make a multiblock string
 print('''
 *******************************************************************************
           |                   |                  |                     |
