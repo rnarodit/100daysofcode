@@ -36,7 +36,7 @@ while (winning == True) :
     print (vs)
     print (f"Compare B, {compareB['name']}, a {compareB ['description']}, from {compareB['country']}")
     choice = input ("Who has more followers ? Type 'A' or 'B'").lower()
-    correct = moreFollowers (compareA , compareB , choice)
+    correct = moreFollowers (compareA, compareB, choice)
     os.system('cls')
     print (logo)
     if correct == True :
