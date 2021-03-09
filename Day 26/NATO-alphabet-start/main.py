@@ -9,7 +9,14 @@ print (nato_dict)
 
 
 #TODO 2. Create a list of the phonetic code words from a word that the user inputs.
-word = input ("Please input a word").upper()
+validInput= False
+while (validInput == False):
+    word = input ("Please input a word").upper()
+    try:
+        nato_translate = [nato_dict[letter] for letter in word]
+    except KeyError:
+        print ("You can only Enter Letters")
+    else:
+        validInput= True
 
-nato_translate = [nato_dict[letter] for letter in word]
 print (nato_translate)

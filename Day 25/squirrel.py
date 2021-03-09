@@ -1,7 +1,7 @@
 import pandas
 data = pandas.read_csv("Day 25/2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
 primary_color = data["Primary Fur Color"]
-#print (primary_color)
+print (primary_color)
 color_count= primary_color.value_counts().to_dict()
 print (color_count)
 
