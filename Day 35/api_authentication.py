@@ -4,13 +4,13 @@
 import requests
 from twilio.rest import Client
 
-account_sid = 'ACb68a7002be95740232152dce4cacc220'
-auth_token = 'your auth token here'
+account_sid = ''
+auth_token = ''
 client = Client(account_sid, auth_token)
 
-MY_LAT= 38.795021
-MY_LONG= -77.273300
-api_key= "your API here"
+MY_LAT= 0
+MY_LONG= 0
+api_key= ""
 parameters = {
     "lat":MY_LAT,
     "lon":MY_LONG,
@@ -27,15 +27,14 @@ for id in weather_codes:
     if (id <700):
         will_rain = True
 
-if(will_rain):
+if(will_rain == False):
     client = Client(account_sid, auth_token)
     message = client.messages \
                 .create(
                      body="Don't Forget to bring an Umbrella ☂️",
-                     from_='+19045130626',
-                     to='+15714193748'
+                     from_='',
+                     to=''
                  )
-
     print(message.status)
 
 #enviornment variables -> can set set variables as enviornment variables so u don't need to change the code if u want to make a change to their value(convinience)
